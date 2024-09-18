@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0%;
+    height: 100%;
+}
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+.title{
+    
+    font-size: larger;
+    
+}
+.leftbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.cards{
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 100px;
+    column-gap: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    
+}
+.card>div{
+    
+}
