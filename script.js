@@ -19,11 +19,16 @@ function addBookToLibrary(title,author,pages,readStatus) {
     
 }
 function addCardDetails(title, author, pages, readStatus) {
+    let read;
+    
+    if(readStatus){
+        read="completed"
+    }else{read="Not Completed"}
     const details = [
         `BOOK NAME: ${title}`,
         `AUTHOR NAME: ${author}`,
         `NO OF PAGES: ${pages}`,
-        `READ STATUS: ${readStatus}`
+        `READ STATUS: ${read}`
     ];
 
     const div = document.createElement("div");
@@ -31,6 +36,7 @@ function addCardDetails(title, author, pages, readStatus) {
     details.forEach(detail => {
         const detailDiv = document.createElement("div");
         detailDiv.textContent = detail;
+        div.appendChild(document.createElement("div"));
         div.appendChild(detailDiv);
     });
 
@@ -63,7 +69,7 @@ add.addEventListener("click",()=>{
         document.querySelector("#pages").value,
         document.querySelector("#readStatus").checked
     )
-    displayBooks(myLibrary);
+    
 })
 
 function removeBook(){

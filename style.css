@@ -1,18 +1,26 @@
 *{
     box-sizing: border-box;
+    
 }
 html,body{
     margin: 0%;
     height: 100%;
+    background-color:#982B1C;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .container{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 6fr;
+    
 }
 .title{
-    
-    font-size: larger;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #800000;
+    font-weight: 1000;
     
 }
 .leftbar{
@@ -21,6 +29,8 @@ html,body{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    background-color: #F2E8C6;
+    padding: 0vh 1vh;
     
 }
 
@@ -32,14 +42,62 @@ html,body{
     grid-template-rows: repeat(2,1fr);
     row-gap: 100px;
     column-gap: 20px;
+    padding:2% ;
+    
 }
 .card{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
+    background-color: #DAD4B5;
+    padding: 4vh;
+    border-radius: 7px;
+    border-left: black solid 4px;
+}
+.addBook{
+    padding: 1vh 2vh;
+    border: 0;
+    background-color: #982B1C;
+    border-radius: 8px;
+    font-weight: 800;
+    color: #F2E8C6;
+}
+dialog{
+    padding: 4vh;
+    border: 3px solid black;
+    background-color: #800000;
+
+}
+form>div{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vh;
+    color: #F2E8C6;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:1vh
     
 }
-.card>div{
-    
+.buttons>button{
+    padding: 1vh 2vh;
+    border:0;
+    border-radius: 30px;
+    color: #800000;
+    font-weight: 800;
+    background-color: #F2E8C6;
 }
+::backdrop {
+    background-image: linear-gradient(
+      60deg,
+      #800000,
+      #982B1C
+
+    );
+    opacity: 0.7;
+  }
+  input{
+    background-color: #F2E8C6;
+    border: 0;
+  }
