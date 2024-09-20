@@ -42,17 +42,44 @@ html,body{
     grid-template-rows: repeat(2,1fr);
     row-gap: 100px;
     column-gap: 20px;
-    padding:2% ;
+    padding:1vh ;
     
 }
 .card{
     display: flex;
     flex-direction: column;
-    gap: 30px;
     background-color: #DAD4B5;
     padding: 4vh;
-    border-radius: 7px;
+    border-radius: 1vh;
     border-left: black solid 4px;
+    height: 37vh;
+    justify-content: space-around;
+
+}
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 3vh 0vh;
+    font-size: 1.1rem;
+    background-color: #982B1C;
+    padding: 1.7vh;
+    color: #F2E8C6; ;
+    font-weight: 600;
+    border-left: black solid 4px;
+    
+    
+
+   
+}
+.close{
+    align-self: flex-end;
+    font-size: 2rem; 
+    border: 0;
+    border-radius: 10vh;
+    color: #800000;
+   background-color: #DAD4B5;
+   font-weight: 800;
 }
 .addBook{
     padding: 1vh 2vh;
@@ -101,3 +128,31 @@ form{
     background-color: #F2E8C6;
     border: 0;
   }
+  .read-status{
+    text-align: center;
+    font-size: 1.7rem;
+    color: #800000;
+    font-weight: 800;
+  }
+  .readButton{
+    display: flex;
+   
+
+    
+    
+  }
+  .readButton>button{
+    flex: auto;
+    border: 0;
+    padding: .3vh 0vh;
+    font-weight: 600;
+    
+  }
+  .completed{
+    background-color: #800000;
+    color: #F2E8C6;
+  }
+  .close-card{
+    opacity: .5;
+  }
+  
