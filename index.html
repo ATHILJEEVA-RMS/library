@@ -9,24 +9,24 @@
 </head>
 <body>
     <dialog>
-        <form method="dialog">
+        <form method="dialog" id="form">
             <div><label for="bookName">BOOK NAME:</label>
-                <input type="text" id="bookName" value=""></div>
+                <input type="text" id="bookName" value="" required></div>
             <div>
                 <label for="author">AUTHOR NAME:</label>
-                <input type="text" id="author" value="" >
+                <input type="text" id="author" value="" required>
             </div>
             <div>
                 <label for="pages">NO OF PAGES:</label>
-                <input type="text" id="pages" value="">
+                <input type="text" id="pages" value="" required>
             </div>
             <div>
                 <label for="readStatus">READ STATUS:</label>
                 <input type="checkbox" id="readStatus">
             </div>
             <div class="buttons">
-                <button>CLOSE</button>
-                <button id="add">ADD</button>
+                <button id="close-button" tabindex="-1">CLOSE</button>
+                <button id="add" type="submit" >ADD</button>
             </div>
         </form>
     </dialog>

@@ -87,9 +87,13 @@ function closeCard(id) {
     if (cardToRemove) {
         cardToRemove.parentElement.remove(); 
     }
+    myLibrary.splice(id,1);
 }
 
-
+const close=document.querySelector("#close-button");
+close.addEventListener("click",()=>{
+    dialog.close();
+})
 
 
 
@@ -110,19 +114,24 @@ const addBook=document.createElement("button");
 addBook.textContent="ADD BOOK";
 addBook.className="addBook";
 leftbar.appendChild(addBook);
-
+let form=document.querySelector("#form");
 addBook.addEventListener("click",()=>{
     dialog.showModal();
+    form.reset();
     
 })
 add.addEventListener("click",()=>{
-    addBookToLibrary(
-        document.querySelector("#bookName").value,
-        document.querySelector("#author").value,
-        document.querySelector("#pages").value,
-        document.querySelector("#readStatus").checked
-    )
-    displayBooks(myLibrary);
+    
+    if(form.checkValidity()){
+        addBookToLibrary(
+            document.querySelector("#bookName").value,
+            document.querySelector("#author").value,
+            document.querySelector("#pages").value,
+            document.querySelector("#readStatus").checked
+        )
+        displayBooks(myLibrary);
+    }
+    
     
 })
 
